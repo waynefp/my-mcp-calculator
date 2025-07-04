@@ -109,11 +109,11 @@ export default {
           };
         } else if (method === 'tools/call') {
           const toolName = params.name;
-          const arguments = params.arguments || {};
+          const args = params.arguments || {};    
           
           if (toolName === 'add_numbers') {
-            const a = arguments.a;
-            const b = arguments.b;
+            const a = args.a;
+            const b = args.b;
             const answer = a + b;
             
             calculationHistory.push({
@@ -133,8 +133,8 @@ export default {
               ]
             };
           } else if (toolName === 'multiply_numbers') {
-            const a = arguments.a;
-            const b = arguments.b;
+            const a = args.a;
+            const b = args.b;
             const answer = a * b;
             
             calculationHistory.push({
